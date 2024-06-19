@@ -1,0 +1,113 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+  position: relative; /* Ensure the body has a positioning context */
+  background-image: url('../public/imgg.webp');
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+}
+
+/* Create an overlay with semi-transparent color */
+body::after {
+  content: "";
+  position: fixed; /* Position the overlay fixed to cover the entire viewport */
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.2); /* Adjust opacity here */
+  z-index: -1; /* Move the overlay behind other elements */
+}
+
+.app-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  position: relative; /* Ensure the .app-container is positioned relative */
+  z-index: 1; /* Ensure the .app-container is above the overlay */
+}
+
+/* Rest of your styles */
+
+
+.button-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 20px; 
+}
+
+/* File input styling */
+.file-input-container {
+  margin-bottom: 20px;
+  padding-top: 10px;
+  margin-top: 10px;
+}
+
+.file-input-label {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #2099cc; /* Nice button color */
+  color: #fff;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1.2rem;
+}
+
+.file-input-label input[type="file"] {
+  display: none;
+}
+
+/* Waveform and spectrogram container styling */
+.waveform {
+  width: 100%;
+  max-width: 700px;
+  height: 300px; /* Set a fixed height for consistency */
+  margin-bottom: 20px;
+  margin-left: 15px;
+}
+
+/* Analyze button styling */
+.analyze-button {
+  padding: 10px 20px;
+  background-color: #2099cc; /* Nice button color */
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1.2rem;
+  margin-left: 10px; 
+}
+
+.analyze-button:hover {
+  background-color: #2077a0; /* Darker color on hover */
+}
+
+/* Audio item styling */
+.audio-item {
+  margin-bottom: 10px;
+ 
+}
+
+/* Audio player styling */
+.audio-player {
+  margin-bottom: 20px;
+ 
+}
+
+.audio-list {
+  margin-top: 200px;
+}
+
+
+/* Title styling */
+.app-title {
+  font-size: 2rem;
+ color: white;
+  margin-bottom: 20px; 
+  /* Ensure space below the title */
+}
